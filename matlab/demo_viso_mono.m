@@ -1,19 +1,17 @@
-% demonstrates mono visual odometry on an image sequence
+
 disp('===========================');
 clear all; close all; dbstop error;
 
-% parameter settings (for an example, please download
-% sequence '2010_03_09_drive_0019' from www.cvlibs.net)
-img_dir      = 'img_3';
+% starts at 9:45
+img_dir      = 'img_4';
 param.f      = 645.2;
 param.cu     = 635.9;
 param.cv     = 194.1;
 param.height = 1.6;
 param.pitch  = -0.08;
 first_frame  = 0;
-last_frame   = 372;
+last_frame   = 1053;
 
-% init visual odometry
 visualOdometryMonoMex('init',param);
 
 % init transformation matrix array
